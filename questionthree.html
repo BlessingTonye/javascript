@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        var library = [
+            {
+                author: 'Bill Gates',
+                title: 'The Road Ahead',
+                readingStatus: true
+            },
+            {
+                author: 'Steve Jobs',
+                title: 'Water Isaacson',
+                readingStatus: true
+            },
+            {
+                author: 'Suzanne Collins',
+                title: 'mockingjay: The Final Book Of The Hunger Games',
+                readingStatus: false
+            },
+        ] 
+
+        class Library {
+            constructor (author, title, readingStatus){
+                this.author = author;
+                this.title = title;
+                this.readingStatus = readingStatus;
+            }
+        }
+
+        const myLibrary1 = new Library ('Bill Gates', 'Water Isaacson', true);
+        const myLibrary2 = new Library ('Steve Jobs', 'Water Isaacson', true);
+        const myLibrary3 = new Library ('Suzanne Collins','mockingjay: The Final Book Of The Hunger Games', false);
+
+
+        document.getElementById("demo").innerHTML = myLibrary1.author + " " + myLibrary1.title +" " + myLibrary1.readingStatus + " " + "<br>" + myLibrary2.author + " " + myLibrary2.title +" " + myLibrary2.readingStatus + " "  + "<br>" + myLibrary3.author + " " + myLibrary3.title +" " + myLibrary3.readingStatus;
+
+
+    </script>
+
+
+</body> 
+</html>
+</body>
+</html>

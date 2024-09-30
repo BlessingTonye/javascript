@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: gainsboro;
+    }
+
+    table {
+        width: 100%;
+        text-align: center;
+    }
+
+    table,
+    td {
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+
+    th {
+        font-size: 28px;
+        border: 2px solid black;
+    }
+</style>
+
+<body>
+    <table>
+        <tr>
+            <th>Student</th>
+            <th>Score</th>
+            <th>Grade</th>
+        </tr>
+
+        <tr>
+            <td><label for="name">David</label><br></td>
+            <td><label for="number" id="mark2">80</label><br></td>
+            <td>
+                <p id="grade1"></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="name">Vinoth</label></td>
+            <td><label for="number" id="mark2">77</label></td>
+            <td>
+                <p id="grade2"></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="name">Divya</label></td>
+            <td><label for="number" id="mark3">88</label></td>
+            <td>
+                <p id="grade3"></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="name">Ishitha</label></td>
+            <td><label for="number" id="mark4">95</label></td>
+            <td>
+                <p id="grade4"></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="name">Thomas</label></td>
+            <td><label for="number" id="mark5">68</label></td>
+            <td>
+                <p id="grade5"></p>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+
+        const scores = [80, 77, 88, 95, 68];
+
+        function getGrade(score) {
+            if (score >= 90) {
+                return "A";
+            } else if (score >= 80) {
+                return "B";
+            } else if (score >= 70) {
+                return "C";
+            } else if (score >= 60) {
+                return "D";
+            } else {
+                return "F";
+            }
+        }
+
+        document.getElementById('grade1').innerHTML = getGrade(80);
+        document.getElementById('grade2').innerHTML = getGrade(77);
+        document.getElementById('grade3').innerHTML = getGrade(88);
+        document.getElementById('grade4').innerHTML = getGrade(95);
+        document.getElementById('grade5').innerHTML = getGrade(68);
+
+    </script>
+
+</body>
+
+</html>

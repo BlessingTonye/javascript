@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+        const d = new Date();
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+        const day = days[d.getDay()];
+
+        const hour = d.getHours();
+        const mins = d.getMinutes();
+        const secs = d.getSeconds();
+
+
+        document.getElementById("demo").innerHTML = "Today is " + day;
+        document.getElementById("demo2").innerHTML = "The time is " + hour +" " + mins + " " + secs;
+    </script>
+</body>
+</html>
